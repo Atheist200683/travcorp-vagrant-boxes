@@ -7,10 +7,10 @@ BLUE='\033[1;34m'
 
 echo -e "${BLUE}Downloading and installing the required RPM packages as per Oracle support note 564174.1."
 sudo yum -y --quiet --nogpgcheck install gcc gcc-c++ glibc-devel libstdc++-devel compat-db libXp setarch-2.0-1.1.x86_64 libICE libSM libXt oracle-validated binutils
-sudo rpm -i /vagrant/oas-install-files/rpms/openmotif21-2.1.30-11.EL5.i386.rpm /vagrant/oas-install-files/rpms/xorg-x11-libs-compat-6.8.2-1.EL.33.0.1.i386.rpm
+sudo rpm -i /vagrant-software/oas-10g/rpms/openmotif21-2.1.30-11.EL5.i386.rpm /vagrant-software/oas-10g/rpms/xorg-x11-libs-compat-6.8.2-1.EL.33.0.1.i386.rpm
 
 echo -e "${BLUE}Replacing the libdb.so.2 library in /usr/lib as per Oracle patch 6078836."
-sudo cp /vagrant/oas-install-files/libraries/libdb.so.2 /usr/lib/libdb.so.2
+sudo cp /vagrant-software/oas-10g/libraries/libdb.so.2 /usr/lib/libdb.so.2
 
 echo -e "${BLUE}Replacing the libXtst.so.6 library in /usr/lib as per Oracle support note 564174.1."
 sudo mv /usr/lib/libXtst.so.6 /usr/lib/libXtst.so.6.install
