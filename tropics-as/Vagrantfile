@@ -3,7 +3,7 @@
 
 Vagrant.configure(2) do |config|
 
-  config.vm.box = "oracle-5.8-x86_64.virtualbox"
+  config.vm.box = "oracle-5.8-i386.virtualbox"
   
   config.vm.box_check_update = true
   
