@@ -1,0 +1,21 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+	config.vm.define "tropics-db", autostart: false do |trps|
+		trps.vm.box = "oracle-db"
+		trps.vm.network "forwarded_port", guest: 1521, host: 1521
+		trps.vm.provision "shell", path: "scripts/ssh.sh"
+		trps.vm.provision "shell", path: "scripts/database.sh"
+	end
+	config.vm.define "tmg-db", autostart: false do |tmg|
+		#tmg.vm.box = "oracle-db"
+		#tmg.vm.network "forwarded_port", guest: 1521, host: 1522
+		#TODO
+	end
+	config.vm.define "ch2-db", autostart: false do |ch2|
+		#ch2.vm.box = "oracle-db"
+		#ch2.vm.network "forwarded_port", guest: 1521, host: 1523
+		#TODO
+	end
+end

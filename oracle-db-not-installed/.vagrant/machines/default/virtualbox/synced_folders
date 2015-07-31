@@ -1,1 +1,0 @@
-{"virtualbox":{"/home/oracle/oracle-db":{"guestpath":"/home/oracle/oracle-db","hostpath":"C:/Users/David.Opperman/Desktop/repos/travcorp-bento/software/oracle-db","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/David.Opperman/Desktop/repos/travcorp-vagrant-boxes/oracle-db-not-installed","disabled":false}}}
