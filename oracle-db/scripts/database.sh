@@ -4,14 +4,14 @@ su - oracle -c "
 ORACLE_DATA_SOURCE=vagrant@lonrmstdb01.corp.ttc:/apps/vagrant/oradata/VAGRANT;
 ORACLE_DATA_DIR=/apps/oradata;
 
-echo -e \"Terminating the current Oracle database if one exists...\"
+echo -e \"Terminating the current database if one exists...\"
 lsnrctl stop > /dev/null 2>&1
 sqlplus \"/ as sysdba\" > /dev/null 2>&1 <<EOF
 		shutdown abort;
 EOF
 rm -f \${ORACLE_DATA_DIR}/\${ORACLE_SID}/*
 rm -f /apps/oracle/fast_recovery_area/\${ORACLE_SID}/*.ctl
-echo -e \"Copying a new Oracle database from the source server...\"
+echo -e \"Copying a new database from the source server...\"
 rsync --archive --ignore-times --exclude \"temp*\" --exclude \"*.log\" --exclude \"*.ctl\" \${ORACLE_DATA_SOURCE}/ \${ORACLE_DATA_DIR}/\${ORACLE_SID}
 echo -e \"Provisioning new database...\"
 DATAFILES=\$(for i in  \$(ls -w 1 -b \${ORACLE_DATA_DIR}/\${ORACLE_SID}/*.dbf) ; do echo \,\'"\${i}"\'\\\r ; done);

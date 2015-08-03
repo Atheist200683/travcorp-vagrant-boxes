@@ -14,3 +14,7 @@ sc_ttc/sc_ttc
 itropics/itropics
 system/vagrant
 sys/vagrant as sysdba
+
+tropics credentials:
+
+dev.user/qwerty123
