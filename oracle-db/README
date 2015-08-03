@@ -1,20 +1,18 @@
-tropics-db connection details:
-
-host: 	localhost
-port: 	1521
-sid:	vagrant
-
-tropics-db credentials:
-
-cs_ttc/cs_ttc
-rs_ttc/rs_ttc
-op_ttc/op_ttc
-pr_ttc/pr_ttc
-sc_ttc/sc_ttc
-itropics/itropics
-system/vagrant
-sys/vagrant as sysdba
-
-tropics credentials:
-
-dev.user/qwerty123
+oracle-db basebox os credentials:
+	vagrant/vagrant (sudoer)
+	oracle/oracle (sudoer)
+tropics-db database connection details:
+	host: 	localhost
+	port: 	1521
+	sid:	vagrant
+tropics-db database user credentials:
+	cs_ttc/cs_ttc
+	rs_ttc/rs_ttc
+	op_ttc/op_ttc
+	pr_ttc/pr_ttc
+	sc_ttc/sc_ttc
+	itropics/itropics
+	system/vagrant
+	sys/vagrant as sysdba
+tropics user credentials:
+	dev.user/qwerty123
