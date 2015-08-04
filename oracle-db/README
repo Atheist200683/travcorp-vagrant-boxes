@@ -1,10 +1,20 @@
+usage:
+	tropics-db:
+	create:		vagrant --version=[dev(default)/qa/patch] up tropics-db
+	provision:	vagrant --version=[dev(default)/qa/patch] provision tropics-db
+	halt:		vagrant halt tropics-db
+	resume:		vagrant resume tropics-db
+	destroy:	vagrant destroy --force tropics-db
+
 oracle-db basebox os credentials:
 	vagrant/vagrant (sudoer)
-	oracle/oracle (sudoer)
+	oracle/oracle (sudoer) - su to this user to access Oracle via the command line
+
 tropics-db database connection details:
 	host: 	localhost
 	port: 	1521
 	sid:	vagrant
+
 tropics-db database user credentials:
 	cs_ttc/cs_ttc
 	rs_ttc/rs_ttc
@@ -14,5 +24,6 @@ tropics-db database user credentials:
 	itropics/itropics
 	system/vagrant
 	sys/vagrant as sysdba
+
 tropics user credentials:
 	dev.user/qwerty123
