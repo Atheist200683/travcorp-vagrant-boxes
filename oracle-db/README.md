@@ -1,12 +1,15 @@
-##tropics-db vagrant box
+##travcorp oracle-db vagrant box
 
-##1. usage:
-  - *create:*	vagrant --version=[dev(default)/qa/patch] up tropics-db
-  - *provision:*vagrant --version=[dev(default)/qa/patch] provision tropics-db
-  - *halt:*		vagrant halt tropics-db
-  - *resume:*	vagrant resume tropics-db
-  - *destroy:*	vagrant destroy --force tropics-db
-  - *ssh:*		vagrant ssh tropics-db
+##tropics-db machine:
+
+1. ##usage:
+  - **create:**	vagrant --version=[dev(default)/qa/patch] up tropics-db
+  - **provision:** vagrant --version=[dev(default)/qa/patch] provision tropics-db
+  - **halt:** vagrant halt tropics-db
+  - **resume:** vagrant resume tropics-db
+  - **destroy:** vagrant destroy --force tropics-db
+  - **ssh:** vagrant ssh tropics-db
+  
 ##2. notes:
   -*--version:*	
     *Specifies the state of the database you want create in your Vagrant box (see the create command above).
