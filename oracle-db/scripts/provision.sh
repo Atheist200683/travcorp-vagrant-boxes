@@ -8,6 +8,7 @@ SOURCE_USER_HOST=\"vagrant@lonrmstdb01.corp.ttc\"
 SOURCE_DATA_DIR=\"/apps/vagrant/dbf-files\"
 LOCAL_DATA_DIR=\"/apps/oradata\"
 SOURCE_DATA_SET=\"$1\"
+
 echo -e \"########################\"
 echo -e \"### Provisioning SSH ###\"
 echo -e \"########################\"
