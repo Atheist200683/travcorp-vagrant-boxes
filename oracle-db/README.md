@@ -10,11 +10,11 @@
   
 2. **Notes:**
   - **--version:**	
-  - Specifies the state of the database you want create in your Vagrant box (see the create command above).
-  - For example if "patch" is specified it will create a database with the same state as the patch environment.
-  -	The default value if this parameter is unspecified is "dev".
-  -	You can switch between database states using the vagrant provision command as detailed above.
-  -	**This feature will use actual database changeset scripts in the near future and change to accept a version number instead of a environment tag.**
+    - Specifies the state of the database you want create in your Vagrant box (see the create command above).
+    - For example if "patch" is specified it will create a database with the same state as the patch environment.
+    - The default value if this parameter is unspecified is "dev".
+    - You can switch between database states using the vagrant provision command as detailed above.
+    - **This feature will use actual database changeset scripts in the near future and change to accept a version number instead of a environment tag.**
   
 3. **OS credentials:**
   - vagrant/vagrant (sudoer)
