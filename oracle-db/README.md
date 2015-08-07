@@ -5,7 +5,7 @@
   - **provision:** vagrant --version=[dev(default)/qa/patch] provision tropics-db
   - **halt:** vagrant halt tropics-db
   - **resume:** vagrant resume tropics-db
-  - **destroy:** vagrant destroy --force tropics-db
+  - **destroy:** vagrant destroy tropics-db
   - **ssh:** vagrant ssh tropics-db - this command works in Cygwin Only
   
 2. **Notes:**
