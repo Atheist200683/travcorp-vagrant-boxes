@@ -1,0 +1,14 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+####=Main Vagrant configuration file=####
+Vagrant.configure(2) do |config1|
+  ##haproxy01 instance
+  config1.vm.define "haproxy01" do |haproxy01|
+  haproxy01.vm.box = "travcorp/oracle-6.7"
+	haproxy01.vm.hostname = "haproxy01"
+  haproxy01.vm.provision "file", source: "files", destination: "/home/vagrant/files"
+  haproxy01.vm.provision :shell, path: "scripts/provision.sh"
+	haproxy01.vm.network "private_network", ip: "192.168.2.10", :netmask => "255.255.255.0"
+  end
+end
